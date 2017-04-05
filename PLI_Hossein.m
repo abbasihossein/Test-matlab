@@ -16,26 +16,5 @@ Signal = F(1:308,1:4000);
 
 chan_num = size(Signal,1);
 for j = 1:chan_num;
-Phase(j,:) = angle(hilbert(Signal(j,:)));
-end
-
-for i = 1:chan_num
-    for m = 1:chan_num
-        PLI(i,m) = abs(mean(sign(sin(Phase(i,:)-Phase(m,:)))));
-    end
-end
-% if PLI(i,m) ==0| m~=i
-   n=size(PLI,1);
- for b=1:n-1
- for a=b+1:n
- PLI(a,b) = PLI(b,a);
-end
- end 
- 
- Y = max(PLI(:));
- Z = min (PLI(:));
- 
-figure;
-imagesc(PLI)
-colorbar
+Phase(j,:) = angle(hilbert(Signal(j,
  
