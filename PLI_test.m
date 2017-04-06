@@ -1,3 +1,4 @@
+Hi Hossein. I am here to say 
 clear all
 clc
 Fs = 1000;                          %Downsampled from 2400Hz to 1000Hz
